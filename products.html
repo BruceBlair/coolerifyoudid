@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products in Development — CoolerIfYouDid</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="nav-html.js"></script>
+<main>
+
+  <div class="page-header">
+    <div class="eyebrow">Products in development</div>
+    <h1>Built to<br>survive summer.</h1>
+    <p class="lede">Three products. One physics stack. Everything below runs on the same BaSO₄-based PDRC coating, PCM thermal mass, and thermoelectric harvest architecture.</p>
+  </div>
+
+  <!-- BOUNCEBOX -->
+  <section id="bouncebox">
+    <div class="section-label">GTN field station</div>
+    <h2>BounceBox</h2>
+    <p style="max-width:600px">The BounceBox is a self-powered ground truth sensor enclosure engineered for permanent outdoor deployment with zero grid dependency. PDRC on all six faces. Thermoelectric generators on the inner shell. PCM thermal buffer between them. Everything else hangs on DIN rail inside.</p>
+
+    <div class="card-grid cols-2" style="margin-top:40px">
+      <div class="card">
+        <div class="card-accent cool"></div>
+        <div class="card-tag tag-cool">Enclosure</div>
+        <h3>Thermakon shell</h3>
+        <ul class="spec-list">
+          <li>~280 × 160 × 80mm aluminum body</li>
+          <li>PDRC coating all 6 faces — 95%+ solar reflectance</li>
+          <li>TEG tiles on inner shell, avg 1.5–2.5W harvest</li>
+          <li>15mm PCM liner, 76–80°F melt point</li>
+          <li>8mm air break between PCM and DIN rail</li>
+          <li>3× SMA bulkhead feedthroughs for external antennas</li>
+          <li>North arrow molded into lid for alignment</li>
+          <li>IP67 rated, single pole mount</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent amber"></div>
+        <div class="card-tag tag-dev">Electronics</div>
+        <h3>Compute + comms</h3>
+        <ul class="spec-list">
+          <li>Pi Zero 2W — primary compute, duty-cycled</li>
+          <li>10Ah LiFePO₄ internal battery</li>
+          <li>Bidirectional USB-C PD BMS bridge (patent pending)</li>
+          <li>Cellular modem, duty-cycled to match TEG budget</li>
+          <li>Triggered camera — event-based capture</li>
+          <li>Ecowitt WS90 weather station integration</li>
+          <li>DS18B20 1-Wire thermal probes</li>
+          <li>InfluxDB → Grafana data pipeline</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent teal"></div>
+        <div class="card-tag tag-teal">Power budget</div>
+        <h3>Energy balance</h3>
+        <ul class="spec-list">
+          <li>TEG harvest: 1.5–2.5W continuous (ΔT dependent)</li>
+          <li>Pi Zero 2W idle: ~0.5W — viable at minimum ΔT</li>
+          <li>Cellular active draw: ~1.8W — duty-cycled to budget</li>
+          <li>Camera trigger: ~50mA burst, milliseconds</li>
+          <li>Net positive in any direct sun condition</li>
+          <li>10Ah buffer = ~48hr calm-weather reserve</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent pdrc"></div>
+        <div class="card-tag tag-pdrc">Deployment</div>
+        <h3>Install profile</h3>
+        <ul class="spec-list">
+          <li>Single-pole mount — EMT conduit or unistrut</li>
+          <li>No grid connection required</li>
+          <li>No external solar panel required</li>
+          <li>North-oriented lid for consistent ΔT characterization</li>
+          <li>Cellular data — no local WiFi dependency</li>
+          <li>Designed for ridge, hilltop, and exposed terrain</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;padding:32px;background:var(--panel);border:1px solid var(--border)">
+      <div class="section-label" style="margin-bottom:16px">Thermakon branding</div>
+      <p style="font-family:var(--mono);font-size:13px;color:var(--cool)">
+        "Parse the light. Yeet the heat. Keep your cool."
+      </p>
+      <p style="margin-top:8px;font-size:14px">The name <strong style="color:var(--white)">Thermakon</strong> derives from <em>thermal</em> + <em>pharmakon</em> — the Greek word for both poison and remedy. Heat is the problem and the power source. Also registered: <span style="font-family:var(--mono);color:var(--cool)">thermakon.com</span></p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- THERMALLY SMOOTH UPGRADE -->
+  <section id="thermally-smooth">
+    <div class="section-label">Retrofit module</div>
+    <h2>Thermally smooth<br>upgrade kit</h2>
+    <p style="max-width:600px">The full-siding retrofit — BounceBox-class thermal management applied to any existing building exterior. PDRC coating on all weather-exposed faces with integrated TEG siding panels that harvest the ΔT between direct sun and interior wall surface.</p>
+
+    <div class="card-grid cols-2" style="margin-top:40px">
+      <div class="card">
+        <div class="card-accent cool"></div>
+        <div class="card-tag tag-cool">Siding system</div>
+        <h3>TEG siding panels</h3>
+        <ul class="spec-list">
+          <li>PDRC-coated outer face — reflects solar load</li>
+          <li>TEG tiles bonded to inner panel face</li>
+          <li>Clip-rail mount — swappable, field-replaceable</li>
+          <li>Ventilated standoff doubles as angular selective emitter</li>
+          <li>Modular 300 × 600mm panel format</li>
+          <li>Hot side toward wall mass — maximizes ΔT</li>
+          <li>Harvest: 0.5–1.5W per panel in peak sun</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent pdrc"></div>
+        <div class="card-tag tag-pdrc">Roofing</div>
+        <h3>CoolSeal roof system</h3>
+        <ul class="spec-list">
+          <li>Elastomeric BaSO₄-based PDRC coating</li>
+          <li>Applied by foam roller or airless sprayer</li>
+          <li>Works over existing membrane, metal, or asphalt</li>
+          <li>Type B panel option: PDRC + TEG + PCM laminate</li>
+          <li>PCM layer buffers peak load — decouples thermal mass from structure</li>
+          <li>Compatible with clip-rail for field-replaceable TEG tiles</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="data-bar-wrap" style="max-width:700px;margin-top:48px">
+      <div class="section-label" style="margin-bottom:24px">Expected performance — Texas summer baseline</div>
+      <div class="data-bar-row">
+        <span class="data-bar-label">Roof surface temp reduction</span>
+        <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--cool)" data-w="75"></div></div>
+        <span class="data-bar-val">−20°C</span>
+      </div>
+      <div class="data-bar-row">
+        <span class="data-bar-label">Attic air temp reduction</span>
+        <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--teal)" data-w="55"></div></div>
+        <span class="data-bar-val">−12°C</span>
+      </div>
+      <div class="data-bar-row">
+        <span class="data-bar-label">A/C load reduction</span>
+        <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--pdrc)" data-w="45"></div></div>
+        <span class="data-bar-val">15–30%</span>
+      </div>
+      <div class="data-bar-row">
+        <span class="data-bar-label">TEG harvest — full siding deployment</span>
+        <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--amber)" data-w="30"></div></div>
+        <span class="data-bar-val">50–200W</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- WEATHER STATION -->
+  <section id="weather-station">
+    <div class="section-label">First product</div>
+    <h2>GTN Weather Station</h2>
+    <p style="max-width:600px">The first shippable unit in the Ground Truth Network product line. A professional-grade hyperlocal weather station purpose-built for terrain-constrained deployment in the Texas Hill Country and beyond.</p>
+
+    <div class="card-grid cols-3" style="margin-top:40px">
+      <div class="card">
+        <div class="card-accent cool"></div>
+        <div class="card-tag tag-cool">Hardware</div>
+        <h3>Ecowitt WS90</h3>
+        <ul class="spec-list">
+          <li>Ultrasonic wind speed + direction</li>
+          <li>Rain gauge — self-emptying tipping bucket</li>
+          <li>Solar radiation sensor</li>
+          <li>UV index</li>
+          <li>Temperature + humidity — radiation-shielded</li>
+          <li>Barometric pressure</li>
+          <li>GW3000 gateway — local + cloud data relay</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent teal"></div>
+        <div class="card-tag tag-teal">Data pipeline</div>
+        <h3>Local + network</h3>
+        <ul class="spec-list">
+          <li>python-ecowitt local polling</li>
+          <li>InfluxDB time-series storage on NAS</li>
+          <li>Grafana dashboards — live and historical</li>
+          <li>MQTT for internal event bus</li>
+          <li>Ecowitt cloud for public data sharing</li>
+          <li>Pre-PDRC baseline logging — non-recoverable data</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-accent amber"></div>
+        <div class="card-tag tag-dev">GTN placement</div>
+        <h3>Positioning logic</h3>
+        <ul class="spec-list">
+          <li>Ridge and hilltop priority — max sky view factor</li>
+          <li>5° WS90 blind spot compensated by mast geometry</li>
+          <li>Eastern face preference — morning thermal gradient</li>
+          <li>Stations placed before any PDRC installation</li>
+          <li>Data rights clause non-negotiable in all installs</li>
+          <li>Network spacing: one per square mile minimum</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;padding:32px;background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--heat)">
+      <div class="section-label" style="margin-bottom:12px">Field imperative</div>
+      <p style="font-size:17px;font-style:italic;color:var(--white)">Pre-installation baseline data is non-recoverable. Every GTN station must be logging before the first PDRC surface is applied. You cannot go back and measure what the heat was before.</p>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <div>
+      <h3>Interested in a station?</h3>
+      <p style="margin-bottom:0">GTN pilot deployments are open to property owners in the Wimberley and greater Hill Country region. Data sharing agreement required.</p>
+    </div>
+    <a href="contact.html" class="btn btn-cool">Contact us →</a>
+  </div>
+
+</main>
+<script src="nav.js"></script>
+</body>
+</html>

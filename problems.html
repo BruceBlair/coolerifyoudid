@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problems We Solve — CoolerIfYouDid</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="nav-html.js"></script>
+<main>
+
+  <div class="page-header" style="background:linear-gradient(160deg,#140810 0%,var(--slate) 100%)">
+    <div class="eyebrow">Problems we solve</div>
+    <h1>Seven problems.<br>One physics answer.</h1>
+    <p class="lede">Passive daytime radiative cooling is not one application — it is a thermodynamic primitive. The same surface treatment that cools a rooftop applies at every scale, from a PCM vest to a hurricane zone.</p>
+  </div>
+
+  <!-- URBAN HEAT ISLAND -->
+  <section id="uhi">
+    <div class="section-label">Problem 01</div>
+    <h2>Urban heat island</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:16px">
+      <div>
+        <p>Cities run 4–8°F hotter than the rural land surrounding them. The cause is not industry or traffic — it is albedo. Dark impervious surfaces absorb solar energy instead of reflecting it, converting radiation to heat that warms the air, the streets, the people, and the infrastructure.</p>
+        <p>PDRC applied at scale — rooftops, parking structures, road surfaces — reverses the albedo deficit. As coverage spreads, aggregate surface temperature falls, urban air cools, and the mechanical cooling demand that was feeding the problem begins to fall with it.</p>
+        <p>The Pirvaram 2025 model shows net-negative radiative forcing at 1% Earth surface coverage. That is 637 m² per person alive today. The number is achievable. It requires starting.</p>
+        <div style="margin-top:32px">
+          <div class="data-bar-wrap">
+            <div class="data-bar-row">
+              <span class="data-bar-label">Urban vs rural temp differential</span>
+              <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--heat)" data-w="80"></div></div>
+              <span class="data-bar-val">+4–8°F</span>
+            </div>
+            <div class="data-bar-row">
+              <span class="data-bar-label">Additional A/C energy consumption</span>
+              <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--amber)" data-w="65"></div></div>
+              <span class="data-bar-val">5–10%/°F</span>
+            </div>
+            <div class="data-bar-row">
+              <span class="data-bar-label">PDRC surface reflectance vs standard</span>
+              <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--cool)" data-w="90"></div></div>
+              <span class="data-bar-val">+90pp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:2px">
+          <div class="card-accent heat"></div>
+          <div class="card-tag tag-heat">The feedback loop</div>
+          <h3>Heat breeds demand</h3>
+          <p>Hotter cities → more A/C → more electricity → more waste heat from power plants and HVAC exhaust → even hotter cities. PDRC interrupts the loop at the source: the absorbing surface.</p>
+        </div>
+        <div class="card">
+          <div class="card-accent cool"></div>
+          <div class="card-tag tag-cool">The GTN role</div>
+          <h3>Map before treating</h3>
+          <p>Ground Truth Network stations characterize the thermal field before installation — identifying the highest-gradient surfaces where PDRC deployment has the greatest marginal impact per square meter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- UTILITY WORKERS -->
+  <section id="workers" style="background:var(--slate)">
+    <div class="section-label">Problem 02</div>
+    <h2>Utility worker<br>heat protection</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:16px">
+      <div>
+        <p>Delivery drivers, linemen, field crews, and construction workers operate in ambient conditions that kill. Heat-related illness is the leading cause of weather-related occupational death in the United States. The people most exposed are the ones who cannot retreat to a climate-controlled building.</p>
+        <p>PDRC-based passive cool stations and PCM vest technology provide no-power cooling for workers in the field. No compressor, no refrigerant, no grid connection required.</p>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:2px">
+          <div class="card-accent amber"></div>
+          <div class="card-tag tag-dev">PCM vest</div>
+          <h3>Wearable thermal buffer</h3>
+          <ul class="spec-list">
+            <li>Microencapsulated PCM middle layer</li>
+            <li>Melt point variants: 58°F, 65°F, 72°F</li>
+            <li>Brown outer face — UPS driver compatible</li>
+            <li>Concealed insert pockets</li>
+            <li>Recharges in standard commercial refrigerators</li>
+            <li>4–6 hour thermal reserve per charge</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-accent cool"></div>
+          <div class="card-tag tag-cool">Passive cool station</div>
+          <h3>Field rest point</h3>
+          <ul class="spec-list">
+            <li>PDRC shade canopy — −20°C under-surface vs ambient</li>
+            <li>PCM thermal mass bench — cool contact surface</li>
+            <li>BounceBox weather monitoring</li>
+            <li>No power required — fully passive</li>
+            <li>Emergency heat casualty staging capability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- DATA CENTER GRID -->
+  <section id="grid">
+    <div class="section-label">Problem 03</div>
+    <h2>Data center<br>load balancing</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:16px">
+      <div>
+        <p>Data centers are the fastest-growing load on the electrical grid. They need power — consistently, reliably, in enormous quantities. The constraint is not generation capacity: it is transmission and distribution capacity at the local level. Urban grids already running near peak to cool overheated buildings cannot absorb another multi-megawatt load without upgrades measured in years and billions.</p>
+        <p>PDRC at urban scale reduces the air conditioning load that competes with data center demand. Every megawatt not consumed by a building that didn't need to be that hot is a megawatt available for compute infrastructure. The thermal infrastructure and the digital infrastructure are on the same grid.</p>
+        <ul class="spec-list" style="margin-top:24px">
+          <li>Urban A/C: 40–70% of summer peak grid load in hot cities</li>
+          <li>PDRC building retrofit: 15–40% A/C reduction per building</li>
+          <li>10% urban A/C reduction ≈ significant transmission capacity freed</li>
+          <li>No new generation required — demand side intervention</li>
+        </ul>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:2px">
+          <div class="card-accent cool"></div>
+          <h3>The argument in one line</h3>
+          <p style="font-size:16px;color:var(--white)">The same technology that cools buildings for free frees the grid capacity the AI economy needs. This is not a coincidence.</p>
+        </div>
+        <div class="card">
+          <div class="card-accent teal"></div>
+          <h3>Direct data center cooling</h3>
+          <p>PDRC applied to data center roof and south/west facades reduces mechanical cooling load on the facility itself. At the scale of a hyperscale campus, the savings are measured in megawatts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- SEA SURFACE TEMPERATURE -->
+  <section id="sst" style="background:var(--slate)">
+    <div class="section-label">Problem 04</div>
+    <h2>Sea surface<br>temperature</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:16px">
+      <div>
+        <p>Tropical cyclones intensify when sea surface temperature exceeds 26°C. The difference between a Category 2 and a Category 5 is approximately 2–3°C of additional SST. That delta is not random — it is the result of decades of accumulated ocean warming from excess atmospheric energy that had nowhere else to go.</p>
+        <p>Claim Z8 (patent pending): floating PDRC panels deployed in hurricane formation zones reduce local sea surface temperature by increasing surface albedo and enabling radiative cooling of the water surface through the panels' undersides. The mechanism is the same as a rooftop — the ocean surface is just a very large, very flat roof.</p>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:2px">
+          <div class="card-accent cool"></div>
+          <div class="card-tag tag-cool">Z8 claim</div>
+          <h3>Floating PDRC arrays</h3>
+          <ul class="spec-list">
+            <li>Panels deployed in hurricane formation zones</li>
+            <li>Upper face: PDRC — reflects solar, rejects heat to space</li>
+            <li>SST reduction target: 1–3°C in formation zone</li>
+            <li>Category intensity reduction: modeled, not yet measured</li>
+            <li>Patent application filed March 2026</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-accent teal"></div>
+          <h3>Precipitation effects</h3>
+          <p>Reduced SST in formation zones alters the moisture and energy available for cyclogenesis — affecting not just storm intensity but regional precipitation patterns and freshwater availability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ALBEDO RESTORATION -->
+  <section id="albedo">
+    <div class="section-label">Problem 05</div>
+    <h2>Albedo restoration</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:16px">
+      <div>
+        <p>Earth's planetary albedo — the fraction of incoming solar radiation reflected back to space — has declined measurably as ice sheets retreat, forests are cleared, and dark urban surfaces expand. A lower albedo means more energy absorbed by the planet. The Pirvaram 2025 analysis establishes the threshold at which PDRC deployment achieves net-negative radiative forcing: 1% of Earth's surface area.</p>
+        <p>This is the number we build toward. 637 m² per living person. Applied to rooftops, road surfaces, floating arrays, and siding upgrades. The GTN sensor network measures progress in real time — albedo before treatment, albedo after, and the thermal delta that confirms the physics is working.</p>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-accent pdrc"></div>
+          <div class="card-tag tag-pdrc">Key figure</div>
+          <h3 style="font-size:52px;color:var(--cool)">637 m²</h3>
+          <p>Per person alive today. Each person's share of the 1% Earth surface coverage that models show is sufficient to achieve net-negative radiative forcing. The number is large. It is also achievable.</p>
+          <p style="margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--faint)">Source: Pirvaram et al. 2025, Advanced Sustainable Systems</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- REMOTE ELECTRONICS -->
+  <section id="remote" style="background:var(--slate)">
+    <div class="section-label">Problem 06</div>
+    <h2>Remote electronics<br>deployment</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:16px">
+      <div>
+        <p>Remote sensing, environmental monitoring, agricultural telemetry, aviation weather — all of it requires electronics in locations without reliable power or shade. Standard enclosures in direct sun can reach 160°F internally, well past the operating limit of most commercial components.</p>
+        <p>The BounceBox solves this at the hardware level: PDRC keeps the outer shell cool, PCM buffers peak thermal load, and TEG harvest powers the compute inside. No grid connection. No solar panel required. No moving parts.</p>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:2px">
+          <div class="card-accent cool"></div>
+          <h3>BounceBox advantage</h3>
+          <ul class="spec-list">
+            <li>Interior: below 95°F even at 110°F ambient</li>
+            <li>TEG-powered compute — no solar panel</li>
+            <li>LiFePO₄ buffer: 48hr calm-weather reserve</li>
+            <li>IP67 — permanent outdoor deployment</li>
+            <li>Single-pole mount — minimal site prep</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-accent amber"></div>
+          <h3>GTN application</h3>
+          <p>The Ground Truth Network deploys BounceBox stations on ridgelines and terrain features in the Texas Hill Country — building the hyperlocal weather dataset that informs PDRC placement and measures its impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- AVIATION SAFETY -->
+  <section id="aviation">
+    <div class="section-label">Problem 07</div>
+    <h2>Aviation safety in<br>complex terrain</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:16px">
+      <div>
+        <p>The Texas Hill Country has no ASOS weather stations covering its ridge-and-canyon terrain. Pilots flying VFR or transitioning between San Antonio and Austin airspace operate in microclimates that existing NWS models cannot resolve — especially during convective development, canyon-wind events, and thermal turbulence that forms on exposed limestone faces.</p>
+        <p>The GTN's first deployment target is the Wimberley Valley — a canyon system with known aviation hazards, a local airstrip, and a population of private pilots who have no ground-truth data for the thermal conditions they fly through.</p>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:2px">
+          <div class="card-accent cool"></div>
+          <h3>GTN coverage target</h3>
+          <ul class="spec-list">
+            <li>One station per terrain feature minimum</li>
+            <li>Wimberley Valley: 18-station alpha network</li>
+            <li>Texas statewide: 18,000 station long-term target</li>
+            <li>Data: wind, pressure, temperature, humidity, radiation</li>
+            <li>Latency: sub-60 second to public endpoint</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-accent teal"></div>
+          <h3>Beyond aviation</h3>
+          <p>The same sensor density that serves aviation serves wildfire spotting, flash flood hydrology, precision agriculture, and the PDRC placement intelligence that is the network's long-term mission.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <div>
+      <h3>One of these is your problem.</h3>
+      <p style="margin-bottom:0">Whether you're a building owner, a utility operator, a researcher, or a municipality — we want to hear which problem brought you here.</p>
+    </div>
+    <a href="contact.html" class="btn btn-cool">Tell us →</a>
+  </div>
+
+</main>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoolerIfYouDid — Passive Daytime Radiative Cooling</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.hero-canvas { position:absolute;inset:0;width:100%;height:100%; }
+</style>
+</head>
+<body>
+<script src="nav-html.js"></script>
+<main>
+
+  <div class="hero">
+    <div class="hero-bg">
+      <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    </div>
+    <div class="hero-eyebrow">Passive daytime radiative cooling / Hill Country, TX</div>
+    <h1>
+      <span class="heat-word">Reject</span> the heat.<br>
+      <span class="cool-word">Keep</span> your cool.
+    </h1>
+    <p class="hero-sub">
+      PDRC-engineered surfaces that reflect solar energy and emit infrared directly to outer space — lowering surface temperatures below ambient without consuming a single watt.
+    </p>
+    <div class="hero-metrics">
+      <div class="metric">
+        <span class="metric-n" style="color:var(--cool)">95%</span>
+        <span class="metric-l">solar reflectance</span>
+      </div>
+      <div class="metric">
+        <span class="metric-n" style="color:var(--pdrc)">−4°C</span>
+        <span class="metric-l">below ambient</span>
+      </div>
+      <div class="metric">
+        <span class="metric-n" style="color:var(--teal)">0W</span>
+        <span class="metric-l">power consumed</span>
+      </div>
+      <div class="metric">
+        <span class="metric-n" style="color:var(--amber)">637m²</span>
+        <span class="metric-l">per person to 1% coverage</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-label">The physics</div>
+    <h2>The sky is a<br>cold sink. Use it.</h2>
+    <p style="max-width:600px">The 8–13 μm atmospheric window is a spectral gap through which long-wave infrared passes directly to space — bypassing the atmosphere entirely. PDRC materials exploit this window, emitting heat to a 3K cold sink 24 hours a day.</p>
+
+    <div class="data-bar-wrap" style="max-width:700px;margin-top:48px">
+      <div class="data-bar-row">
+        <span class="data-bar-label">Standard dark roof — solar absorbed</span>
+        <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--heat)" data-w="95"></div></div>
+        <span class="data-bar-val">95%</span>
+      </div>
+      <div class="data-bar-row">
+        <span class="data-bar-label">Standard roof — reflected</span>
+        <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--amber)" data-w="5"></div></div>
+        <span class="data-bar-val">5%</span>
+      </div>
+      <div class="data-bar-row">
+        <span class="data-bar-label">PDRC surface — solar reflected</span>
+        <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--cool)" data-w="95"></div></div>
+        <span class="data-bar-val">95%+</span>
+      </div>
+      <div class="data-bar-row">
+        <span class="data-bar-label">PDRC — IR emitted through atm. window</span>
+        <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--pdrc)" data-w="88"></div></div>
+        <span class="data-bar-val">8–13μm</span>
+      </div>
+      <div class="data-bar-row">
+        <span class="data-bar-label">Net surface cooling below air temp</span>
+        <div class="data-bar-track"><div class="data-bar-fill" style="background:var(--teal)" data-w="35"></div></div>
+        <span class="data-bar-val">−2 to −8°C</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--slate)">
+    <div class="section-label">What we build</div>
+    <h2>Products &<br>solutions</h2>
+    <div class="card-grid cols-3" style="margin-top:40px">
+      <a href="products.html" style="text-decoration:none">
+        <div class="card">
+          <div class="card-accent cool"></div>
+          <div class="card-tag tag-dev">In development</div>
+          <h3>BounceBox</h3>
+          <p>Self-powered GTN field station. PDRC shell. TEG harvest. LiFePO₄. Fully passive thermal management — deployed anywhere.</p>
+        </div>
+      </a>
+      <a href="thermakon.html" style="text-decoration:none">
+        <div class="card">
+          <div class="card-accent pdrc"></div>
+          <div class="card-tag tag-pdrc">Thermakon</div>
+          <h3>Building envelope</h3>
+          <p>Complete PDRC + TEG + PCM building envelope system. Reduces mechanical cooling load and harvests waste heat differentials.</p>
+        </div>
+      </a>
+      <a href="buildings.html" style="text-decoration:none">
+        <div class="card">
+          <div class="card-accent teal"></div>
+          <div class="card-tag tag-teal">Structures</div>
+          <h3>CoolerIfYouDid<br>buildings</h3>
+          <p>Survival sheds to full habitat installations. Tiered Thermakon packages from baseline passive cool to geothermal-coupled premier.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">The mission</div>
+    <h2>Seven problems.<br>One technology stack.</h2>
+    <div class="card-grid cols-2" style="margin-top:40px">
+      <a href="problems.html#uhi" style="text-decoration:none">
+        <div class="card">
+          <div class="card-accent heat"></div>
+          <h3>Urban heat island</h3>
+          <p>Cities run 4–8°F hotter than surrounding land. PDRC at scale reverses the albedo deficit that caused it.</p>
+        </div>
+      </a>
+      <a href="problems.html#workers" style="text-decoration:none">
+        <div class="card">
+          <div class="card-accent amber"></div>
+          <h3>Utility worker heat protection</h3>
+          <p>Passive cool stations and PCM vest technology for delivery drivers, linemen, and field crews working in extreme heat.</p>
+        </div>
+      </a>
+      <a href="problems.html#grid" style="text-decoration:none">
+        <div class="card">
+          <div class="card-accent cool"></div>
+          <h3>Data center load balancing</h3>
+          <p>Every MW not consumed by overcooled buildings is a MW available to the data centers reshaping the economy.</p>
+        </div>
+      </a>
+      <a href="problems.html#sst" style="text-decoration:none">
+        <div class="card">
+          <div class="card-accent teal"></div>
+          <h3>Sea surface temperature</h3>
+          <p>Floating PDRC arrays in hurricane formation zones reduce SST — the fuel source for Category 4 and 5 storms.</p>
+        </div>
+      </a>
+    </div>
+    <div style="margin-top:24px;text-align:center">
+      <a href="problems.html" class="btn btn-cool">View all problems we solve →</a>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <div>
+      <h3>Ground Truth Network</h3>
+      <p style="margin-bottom:0;max-width:480px">Before PDRC can be deployed intelligently, the thermal field must be mapped. GTN sensor stations characterize microclimate conditions — informing placement, measuring impact, closing the feedback loop.</p>
+    </div>
+    <a href="contact.html" class="btn btn-cool">Get in touch</a>
+  </div>
+
+</main>
+
+<script>
+// Hero canvas — thermal particle field
+(function(){
+  const canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+
+  function resize() {
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function rand(a, b) { return a + Math.random() * (b - a); }
+
+  function initParticles() {
+    particles = [];
+    const count = Math.floor(W * H / 3000);
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: rand(0, W), y: rand(0, H),
+        vx: rand(-0.3, 0.3), vy: rand(-0.8, -0.2),
+        temp: rand(0.2, 1.0),
+        life: rand(0, 200), maxLife: rand(100, 300),
+        size: rand(1, 3)
+      });
+    }
+  }
+
+  function thermalColor(t, a) {
+    let r, g, b;
+    if (t < 0.4) { r=20; g=80+t*200; b=180-t*100; }
+    else if (t < 0.7) { r=20+(t-0.4)*700; g=160; b=100-t*80; }
+    else { r=220; g=160-(t-0.7)*300; b=20; }
+    return `rgba(${r|0},${g|0},${b|0},${a})`;
+  }
+
+  function draw() {
+    ctx.fillStyle = 'rgba(10,14,24,0.12)';
+    ctx.fillRect(0, 0, W, H);
+
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life++;
+      p.temp = Math.max(0, p.temp - 0.0005);
+
+      if (p.life > p.maxLife || p.y < 0) {
+        p.x = rand(0, W); p.y = H + 10;
+        p.life = 0; p.temp = rand(0.4, 1.0);
+        p.maxLife = rand(150, 400);
+      }
+
+      const alpha = 0.6 * (1 - p.life / p.maxLife);
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = thermalColor(p.temp, alpha);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', () => { resize(); initParticles(); });
+  resize(); initParticles(); draw();
+})();
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

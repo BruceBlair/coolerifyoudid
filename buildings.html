@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoolerIfYouDid Buildings — CoolerIfYouDid</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.building-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+.building-header {
+  padding: 32px 40px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.building-type {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 8px;
+}
+.building-name {
+  font-family: var(--display);
+  font-size: 42px;
+  letter-spacing: .04em;
+  line-height: 1;
+  color: var(--white);
+}
+.building-desc {
+  color: var(--dim);
+  max-width: 480px;
+  font-size: 15px;
+  margin-top: 12px;
+}
+.tier-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.tier-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border: 1px solid;
+  border-radius: 2px;
+}
+.badge-base   { color: var(--dim);  border-color: rgba(255,255,255,0.15); }
+.badge-mid    { color: var(--cool); border-color: rgba(74,158,181,0.4);   background: rgba(74,158,181,0.06); }
+.badge-prem   { color: var(--teal); border-color: rgba(29,158,117,0.4);   background: rgba(29,158,117,0.06); }
+
+.building-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.tier-col {
+  padding: 28px 32px;
+  border-right: 1px solid var(--border);
+}
+.tier-col:last-child { border-right: none; }
+.tier-col h4 {
+  font-family: var(--display);
+  font-size: 24px;
+  letter-spacing: .06em;
+  margin-bottom: 6px;
+}
+.tier-col .tier-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.tier-feature {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--dim);
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: baseline;
+}
+.tier-feature::before {
+  content: '·';
+  flex-shrink: 0;
+}
+.tier-feature.yes::before { content: '✓'; color: var(--teal); }
+.tier-feature.no  { opacity: 0.35; }
+.tier-feature.no::before  { content: '—'; color: var(--faint); }
+
+.geo-stat {
+  text-align: center;
+  padding: 32px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+}
+.geo-stat .n {
+  font-family: var(--display);
+  font-size: 56px;
+  letter-spacing: .04em;
+  line-height: 1;
+  color: var(--teal);
+}
+.geo-stat .l {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-top: 8px;
+}
+</style>
+</head>
+<body>
+<script src="nav-html.js"></script>
+<main>
+
+  <div class="page-header">
+    <div class="eyebrow">CoolerIfYouDid structures</div>
+    <h1>Buildings that<br>work with physics.</h1>
+    <p class="lede">From a survival shed that keeps batteries alive in July to a fully geothermal-coupled habitat that stays comfortable without mechanical cooling — every structure in this line applies the Thermakon stack to a specific use case.</p>
+  </div>
+
+  <section>
+    <div class="section-label">Structure line</div>
+    <h2>Survival shed</h2>
+    <p style="max-width:600px">The smallest useful unit. A weatherproof, thermally-managed enclosure designed to keep electronics, medications, batteries, and emergency supplies alive during Texas summers. Deployable off-grid. No HVAC.</p>
+
+    <div class="building-card" style="margin-top:40px">
+      <div class="building-header">
+        <div>
+          <div class="building-type">Structure / off-grid enclosure</div>
+          <div class="building-name">Survival Shed</div>
+          <p class="building-desc">Purpose-built for heat extremes. The goal: interior temperature never exceeds battery operating limit (113°F / 45°C) even on a 110°F Hill Country afternoon with no shade.</p>
+          <div class="tier-badges">
+            <span class="tier-badge badge-base">Baseline</span>
+            <span class="tier-badge badge-mid">Midgrade</span>
+            <span class="tier-badge badge-prem">Premier</span>
+          </div>
+        </div>
+      </div>
+      <div class="building-tiers">
+        <div class="tier-col">
+          <h4 style="color:var(--dim)">Baseline</h4>
+          <div class="tier-sub" style="color:var(--faint)">PDRC only</div>
+          <div class="tier-feature yes">PDRC coating — all exterior faces</div>
+          <div class="tier-feature yes">95%+ solar reflectance</div>
+          <div class="tier-feature yes">Ventilated standoff gap</div>
+          <div class="tier-feature yes">Interior: 15–25°F cooler than standard</div>
+          <div class="tier-feature no">PCM thermal buffer</div>
+          <div class="tier-feature no">TEG harvest</div>
+          <div class="tier-feature no">Geothermal coupling</div>
+        </div>
+        <div class="tier-col" style="background:rgba(74,158,181,0.03)">
+          <h4 style="color:var(--cool)">Midgrade</h4>
+          <div class="tier-sub" style="color:var(--cool)">PDRC + PCM</div>
+          <div class="tier-feature yes">PDRC coating — all exterior faces</div>
+          <div class="tier-feature yes">95%+ solar reflectance</div>
+          <div class="tier-feature yes">Ventilated standoff gap</div>
+          <div class="tier-feature yes">Interior: 15–25°F cooler than standard</div>
+          <div class="tier-feature yes">15mm PCM liner — 76°F melt</div>
+          <div class="tier-feature yes">Peak load buffered 4–6 hours</div>
+          <div class="tier-feature no">TEG harvest</div>
+          <div class="tier-feature no">Geothermal coupling</div>
+        </div>
+        <div class="tier-col" style="background:rgba(29,158,117,0.03)">
+          <h4 style="color:var(--teal)">Premier</h4>
+          <div class="tier-sub" style="color:var(--teal)">Full Thermakon stack</div>
+          <div class="tier-feature yes">PDRC coating — all exterior faces</div>
+          <div class="tier-feature yes">95%+ solar reflectance</div>
+          <div class="tier-feature yes">Ventilated clip-rail standoff</div>
+          <div class="tier-feature yes">Interior: 15–25°F cooler than standard</div>
+          <div class="tier-feature yes">PCM thermal buffer</div>
+          <div class="tier-feature yes">TEG tiles — harvest ambient ΔT</div>
+          <div class="tier-feature yes">Pier-coupled ground heat exchanger</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section style="background:var(--slate)">
+    <div class="section-label">Structure line</div>
+    <h2>Storage shed</h2>
+    <p style="max-width:600px">Scaled-up survival enclosure. Protects equipment, chemicals, wine, instruments, and anything else that needs a stable thermal environment year-round. Minimal footprint, serious thermal performance.</p>
+
+    <div class="building-card" style="margin-top:40px">
+      <div class="building-header">
+        <div>
+          <div class="building-type">Structure / utility storage</div>
+          <div class="building-name">Storage Shed</div>
+          <p class="building-desc">All-season thermal management for working storage. Target interior band: 60–80°F without mechanical conditioning. PCM buffers the daily swing. PDRC handles the solar load.</p>
+          <div class="tier-badges">
+            <span class="tier-badge badge-base">Baseline</span>
+            <span class="tier-badge badge-mid">Midgrade</span>
+            <span class="tier-badge badge-prem">Premier</span>
+          </div>
+        </div>
+      </div>
+      <div class="building-tiers">
+        <div class="tier-col">
+          <h4 style="color:var(--dim)">Baseline</h4>
+          <div class="tier-sub" style="color:var(--faint)">PDRC + ventilation</div>
+          <div class="tier-feature yes">PDRC full exterior envelope</div>
+          <div class="tier-feature yes">Passive ridge vent + soffit intake</div>
+          <div class="tier-feature yes">Interior: 20–30°F below ambient peak</div>
+          <div class="tier-feature yes">DS18B20 logging — GTN compatible</div>
+          <div class="tier-feature no">PCM liner</div>
+          <div class="tier-feature no">TEG harvest</div>
+          <div class="tier-feature no">Ground coupling</div>
+        </div>
+        <div class="tier-col" style="background:rgba(74,158,181,0.03)">
+          <h4 style="color:var(--cool)">Midgrade</h4>
+          <div class="tier-sub" style="color:var(--cool)">PDRC + PCM + TEG</div>
+          <div class="tier-feature yes">PDRC full exterior envelope</div>
+          <div class="tier-feature yes">Passive ridge vent + soffit intake</div>
+          <div class="tier-feature yes">Interior: 20–30°F below ambient peak</div>
+          <div class="tier-feature yes">DS18B20 logging — GTN compatible</div>
+          <div class="tier-feature yes">25mm PCM wall liner</div>
+          <div class="tier-feature yes">TEG siding — 50–150W harvest</div>
+          <div class="tier-feature no">Ground coupling</div>
+        </div>
+        <div class="tier-col" style="background:rgba(29,158,117,0.03)">
+          <h4 style="color:var(--teal)">Premier</h4>
+          <div class="tier-sub" style="color:var(--teal)">Full stack + geothermal</div>
+          <div class="tier-feature yes">PDRC full exterior envelope</div>
+          <div class="tier-feature yes">Passive ventilation system</div>
+          <div class="tier-feature yes">Interior: 20–30°F below ambient peak</div>
+          <div class="tier-feature yes">GTN sensor array integrated</div>
+          <div class="tier-feature yes">PCM wall + roof liner</div>
+          <div class="tier-feature yes">Full TEG siding harvest</div>
+          <div class="tier-feature yes">Pier-integrated ground exchanger</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- HABITAT -->
+  <section>
+    <div class="section-label">Structure line</div>
+    <h2>Habitat</h2>
+    <p style="max-width:600px">A habitable structure engineered to remain livable without air conditioning on the hottest days in Texas. Not a claim about comfort — a claim about survivability. The Premier tier targets indoor conditions a human can work in indefinitely during a 110°F grid outage.</p>
+
+    <div class="building-card" style="margin-top:40px">
+      <div class="building-header">
+        <div>
+          <div class="building-type">Structure / habitable space</div>
+          <div class="building-name">Habitat</div>
+          <p class="building-desc">Full-size occupiable building with complete Thermakon envelope. Operates as a passive cooling demonstration site — every surface logged, every thermal delta documented, every claim falsifiable.</p>
+          <div class="tier-badges">
+            <span class="tier-badge badge-base">Baseline</span>
+            <span class="tier-badge badge-mid">Midgrade</span>
+            <span class="tier-badge badge-prem">Premier</span>
+          </div>
+        </div>
+      </div>
+      <div class="building-tiers">
+        <div class="tier-col">
+          <h4 style="color:var(--dim)">Baseline</h4>
+          <div class="tier-sub" style="color:var(--faint)">Envelope + passive HVAC assist</div>
+          <div class="tier-feature yes">PDRC roof + south/west walls</div>
+          <div class="tier-feature yes">HVAC load reduction: 15–25%</div>
+          <div class="tier-feature yes">Passive airflow — cross ventilation designed in</div>
+          <div class="tier-feature yes">GTN weather station included</div>
+          <div class="tier-feature yes">Pre/post thermal logging package</div>
+          <div class="tier-feature no">PCM thermal mass</div>
+          <div class="tier-feature no">TEG harvest</div>
+          <div class="tier-feature no">Geothermal pier coupling</div>
+        </div>
+        <div class="tier-col" style="background:rgba(74,158,181,0.03)">
+          <h4 style="color:var(--cool)">Midgrade</h4>
+          <div class="tier-sub" style="color:var(--cool)">Thermakon wall + roof</div>
+          <div class="tier-feature yes">PDRC — full exterior envelope</div>
+          <div class="tier-feature yes">HVAC load reduction: 25–40%</div>
+          <div class="tier-feature yes">Optimized natural ventilation</div>
+          <div class="tier-feature yes">GTN sensor array — roof, wall, interior</div>
+          <div class="tier-feature yes">PCM in roof assembly — 30mm</div>
+          <div class="tier-feature yes">TEG siding — 100–300W building harvest</div>
+          <div class="tier-feature no">Geothermal pier coupling</div>
+        </div>
+        <div class="tier-col" style="background:rgba(29,158,117,0.03)">
+          <h4 style="color:var(--teal)">Premier</h4>
+          <div class="tier-sub" style="color:var(--teal)">Zero-mechanical-cooling target</div>
+          <div class="tier-feature yes">PDRC — full exterior + east-facing optimized</div>
+          <div class="tier-feature yes">HVAC load reduction: 40–60%+</div>
+          <div class="tier-feature yes">Passive thermosiphon ventilation</div>
+          <div class="tier-feature yes">Full GTN research station</div>
+          <div class="tier-feature yes">PCM full envelope — roof + walls + floor</div>
+          <div class="tier-feature yes">Complete TEG building harvest</div>
+          <div class="tier-feature yes">Pier-integrated geothermal loop</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- GEOTHERMAL COOLER -->
+  <section style="background:linear-gradient(180deg,var(--slate) 0%,var(--navy) 100%)">
+    <div class="section-label">Passive cooling limit</div>
+    <h2>CoolerIfYouDid<br>geothermal cooler</h2>
+    <p style="max-width:640px">The deepest passive cooling available without a compressor. Ground temperature in the Texas Hill Country limestone at 4–6 feet remains between 65°F and 72°F year-round — even when the surface hits 110°F. Pier-integrated heat exchangers conduct interior heat to that stable ground mass. No refrigerant. No moving parts.</p>
+
+    <div class="card-grid cols-3" style="margin-top:48px">
+      <div class="geo-stat">
+        <div class="n">68°F</div>
+        <div class="l">ground temp at 4–6ft depth<br>Texas Hill Country limestone</div>
+      </div>
+      <div class="geo-stat">
+        <div class="n">110°F</div>
+        <div class="l">surface ambient<br>peak summer afternoon</div>
+      </div>
+      <div class="geo-stat">
+        <div class="n" style="color:var(--cool)">−42°F</div>
+        <div class="l">ΔT available for<br>passive heat rejection</div>
+      </div>
+    </div>
+
+    <div style="margin-top:48px">
+      <div class="section-label" style="margin-bottom:24px">How it works</div>
+      <div class="card-grid cols-2">
+        <div class="card">
+          <div class="card-accent teal"></div>
+          <h3>Pier integration</h3>
+          <p>Structural piers are drilled into limestone with embedded copper or HDPE heat exchanger tubing. The building sits on the piers — heat path from interior to ground is structural, not mechanical.</p>
+          <ul class="spec-list">
+            <li>6–10ft pier depth in Hill Country limestone</li>
+            <li>Ground thermal mass: enormous and stable</li>
+            <li>No pumps required — natural convection or minimal assist</li>
+            <li>Geology assessment required before design</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-accent cool"></div>
+          <h3>Performance limit</h3>
+          <p>The coldest achievable interior temperature is bounded by ground temperature plus the thermal resistance of the exchange path. In practice: a well-designed system holds 72–76°F interior when ambient is 108°F+.</p>
+          <ul class="spec-list">
+            <li>Interior target: 72–76°F no mechanical assist</li>
+            <li>Combined with PDRC + PCM: 68–72°F achievable</li>
+            <li>USDA Web Soil Survey + bore test required first</li>
+            <li>ERT site characterization for large installations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;padding:32px;background:rgba(29,158,117,0.08);border:1px solid rgba(29,158,117,0.25)">
+      <div class="section-label" style="margin-bottom:12px;color:var(--teal)">The honest spec</div>
+      <p style="font-size:17px;color:var(--white)">On the hottest day of a Texas summer — 110°F ambient, full sun, no wind — a Premier-tier habitat with PDRC envelope, PCM thermal mass, and pier geothermal coupling holds <strong>72–76°F interior without running a compressor.</strong></p>
+      <p style="margin-top:12px;font-size:14px;color:var(--dim)">This is not a simulation. It requires proper site characterization, correct geology, and a well-executed installation. Results are logged and published. Every claim is falsifiable.</p>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <div>
+      <h3>Site assessment first.</h3>
+      <p style="margin-bottom:0;max-width:480px">Geothermal performance is geology-dependent. We run USDA Web Soil Survey analysis and specify auger bore tests before any pier design begins.</p>
+    </div>
+    <a href="contact.html" class="btn btn-cool">Start the conversation →</a>
+  </div>
+
+</main>
+<script src="nav.js"></script>
+</body>
+</html>

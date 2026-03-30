@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — CoolerIfYouDid</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="nav-html.js"></script>
+<main>
+
+  <div class="page-header">
+    <div class="eyebrow">Contact</div>
+    <h1>Start with a problem.<br>We'll find the physics.</h1>
+    <p class="lede">We are in early-stage development, operating out of Wimberley, TX. If one of the seven problems on this site is yours — we want to hear about it.</p>
+  </div>
+
+  <section>
+    <div class="contact-wrap">
+      <div>
+        <div class="section-label" style="margin-bottom:32px">Reach us</div>
+        <div class="contact-info">
+          <div class="line">
+            <span>Email</span>
+            <span><a href="mailto:be.alot@coolerifyoudid.com">be.alot@coolerifyoudid.com</a></span>
+          </div>
+          <div class="line">
+            <span>Location</span>
+            <span>Wimberley, TX — Hill Country</span>
+          </div>
+          <div class="line">
+            <span>Web</span>
+            <span><a href="https://coolerifyoudid.com">coolerifyoudid.com</a></span>
+          </div>
+          <div class="line">
+            <span>Thermakon</span>
+            <span><a href="https://thermakon.com">thermakon.com</a></span>
+          </div>
+          <div class="line">
+            <span>Expressive</span>
+            <span><a href="https://highlyreflective.one">highlyreflective.one</a></span>
+          </div>
+        </div>
+
+        <div style="margin-top:48px">
+          <div class="section-label" style="margin-bottom:20px">What to tell us</div>
+          <ul class="spec-list">
+            <li>Which problem brought you here</li>
+            <li>Your location and site type (roof, field, fleet, building)</li>
+            <li>Whether you can host a GTN weather station</li>
+            <li>Your timeline — research, pilot, or deployment</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:48px;padding:28px;background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--cool)">
+          <div style="font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cool);margin-bottom:12px">GTN data rights notice</div>
+          <p style="font-size:14px">All GTN station deployments include a data rights clause. High in the Hill Country LLC retains rights to aggregate, analyze, and commercially distribute data from all network stations regardless of hardware funder. This is non-negotiable.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-label" style="margin-bottom:32px">Send a message</div>
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>Which problem are you working on?</label>
+            <select name="problem">
+              <option value="">Select one</option>
+              <option value="uhi">Urban heat island</option>
+              <option value="workers">Utility / worker heat protection</option>
+              <option value="grid">Data center / grid load</option>
+              <option value="sst">Sea surface temperature</option>
+              <option value="albedo">Albedo restoration / climate</option>
+              <option value="remote">Remote electronics deployment</option>
+              <option value="aviation">Aviation safety / weather data</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" placeholder="Describe your situation. The more specific the better." rows="6"></textarea>
+          </div>
+          <div id="form-status" style="display:none;padding:16px;border:1px solid;font-family:var(--mono);font-size:12px;margin-bottom:16px"></div>
+          <button type="submit" class="btn btn-cool" style="width:100%;text-align:center">
+            Send message →
+          </button>
+          <p style="font-size:13px;margin-top:12px;color:var(--faint);font-family:var(--mono)">
+            Or email directly: <a href="mailto:be.alot@coolerifyoudid.com" style="color:var(--cool)">be.alot@coolerifyoudid.com</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT HITHC -->
+  <section style="background:var(--slate)">
+    <div class="section-label">About</div>
+    <h2>High in the Hill Country LLC</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px">
+      <div>
+        <p>High in the Hill Country LLC (HITHC) is the IP holding company for the CoolerIfYouDid and Ground Truth Network ventures, founded and operated in Wimberley, TX.</p>
+        <p>HITHC holds patents and licenses technology to two operating ventures: CoolerIfYouDid (PDRC retrofit products and Thermakon building systems) and GTN (hyperlocal weather sensor network for terrain-constrained environments).</p>
+        <p>We are in early development. The tractor seats are currently on the south-facing slope. The WS90 weather stations are going up in March. The provisional patent was filed March 20, 2026. Everything is being built in the right order.</p>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-accent cool"></div>
+          <h3>Show before tell</h3>
+          <p>No key partnerships are announced before there is something to demonstrate. No claims are made that are not falsifiable. Every installation is logged. Every surface temperature is measured. The data is the pitch.</p>
+          <p style="margin-top:16px;font-family:var(--mono);font-size:12px;color:var(--cool)">
+            "Passive aggressively cool."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const status = document.getElementById('form-status');
+  const data = new FormData(e.target);
+  const obj = Object.fromEntries(data.entries());
+
+  // Show confirmation (in production: POST to endpoint or use Formspree/Netlify)
+  status.style.display = 'block';
+  status.style.color = 'var(--teal)';
+  status.style.borderColor = 'rgba(29,158,117,0.4)';
+  status.style.background = 'rgba(29,158,117,0.06)';
+  status.textContent = `Message received from ${obj.name || 'you'}. We'll respond to ${obj.email} — usually within a few days.`;
+  e.target.querySelector('button').textContent = 'Message sent ✓';
+  e.target.querySelector('button').disabled = true;
+  e.target.querySelector('button').style.opacity = '0.6';
+}
+</script>
+<script src="nav.js"></script>
+</body>
+</html>
